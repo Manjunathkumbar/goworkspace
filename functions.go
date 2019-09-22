@@ -18,7 +18,9 @@ func main()  {
 
 	fmt.Println("functions")
 
-	foo1(1,2,3,4,5,6,7)
+	//variadic parameter
+	s :=sum(1,2,3,4,5,6,7)
+	fmt.Println("The total is ", s)
 }
 func foo(){
 	fmt.Println(" hello from fooo")
@@ -39,7 +41,15 @@ func mouse(fn string, ln string) (string, bool) {
 }
 
 //variadic parameter
-func  foo1(x... int)  {
+func  sum(x... int) int {
 	fmt.Println(x)
 	fmt.Printf("%T\n", x)
+
+	sum :=0
+	for i, v :=range x{
+		sum += v
+		fmt.Println("for item in index position i", i, " we are adding ", v, "totl which is now")
+	}
+
+	return sum
 }
