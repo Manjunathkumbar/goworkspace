@@ -29,22 +29,22 @@ func main() {
 	fmt.Println(x[1:3])
 
 	// without using range
-	for i :=0; i <=4; i++{
+	for i := 0; i <= 4; i++ {
 		fmt.Println(i, x[i])
 	}
 
 	//Appending to slice slice
 
-	y := []int{1,2,3,4,5}
-	y =append(y, 77,88,99)
+	y := []int{1, 2, 3, 4, 5}
+	y = append(y, 77, 88, 99)
 	fmt.Println(y)
 
-	z := []int{11,22,33,444,55}
-	z=append(z,y...)
+	z := []int{11, 22, 33, 444, 55}
+	z = append(z, y...)
 	fmt.Println(z) //[11 22 33 444 55 1 2 3 4 5 77 88 99]
 
 	//delete from slice
-	z=append(z[:2], z[4:]...) //three dots ... is very imp
+	z = append(z[:2], z[4:]...) //three dots ... is very imp
 	fmt.Println(z)
 
 	//slice make---built in function make----make([]int, 10, 100)
@@ -52,20 +52,20 @@ func main() {
 	fmt.Println(m)
 	fmt.Println(len(m))
 	fmt.Println(cap(m))
-	m[0]=24
-	m[9]=999
+	m[0] = 24
+	m[9] = 999
 	fmt.Println(m)
 	fmt.Println(len(m))
 	fmt.Println(cap(m))
 
-	m=append(m,3423)
+	m = append(m, 3423)
 
 	fmt.Println(m)
 	fmt.Println(len(m))
 	fmt.Println(cap(m))
 
-	m=append(m,3423)
-	m=append(m,3423) //it will make double the size in run time 24
+	m = append(m, 3423)
+	m = append(m, 3423) //it will make double the size in run time 24
 
 	fmt.Println(m)
 	fmt.Println(len(m))
@@ -80,8 +80,5 @@ func main() {
 
 	xp := [][]string{jb, mp}
 	fmt.Println(xp)
-
-
-
 
 }
