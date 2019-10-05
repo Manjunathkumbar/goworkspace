@@ -14,6 +14,12 @@ type secretAgent struct {
 	licence bool
 }
 
+//method of type secret agent
+func (s secretAgent) speak() {
+	fmt.Println("I am", s.first, s.last)
+
+}
+
 func main() {
 
 	p1 := person{
@@ -38,6 +44,7 @@ func main() {
 	fmt.Println(p2.first, p2.last, p2.age)
 	fmt.Println(s1)
 	fmt.Println(s1.first, s1.last, s1.age)
+	s1.speak()
 
 	//anonymous struct
 
